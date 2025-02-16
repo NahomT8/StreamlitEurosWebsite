@@ -1,4 +1,4 @@
-from mplsoccer import VerticalPitch
+from mplsoccer import Pitch
 import json
 import streamlit as st
 import pandas as pd
@@ -24,7 +24,7 @@ def filterData(df, team, player):
 
 filtered_df = filterData(df, team, player)
 
-pitch = VerticalPitch(pitch_type="statsbomb", half=True)
+pitch = Pitch(pitch_type="statsbomb", half=True)
 fig, ax = pitch.draw(figsize=(10,10))
 
 def plotShots(df, ax, pitch):
